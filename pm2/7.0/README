@@ -4,4 +4,6 @@ docker build -t jfnode .
 
 docker run -d --name jfnode jfnode
 
+#ready to build
+
 ```
