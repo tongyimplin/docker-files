@@ -1,0 +1,7 @@
+
+```
+docker build -t jfnode .
+
+docker run -d --name jfnode jfnode
+
+```

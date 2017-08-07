@@ -4,4 +4,7 @@ docker build -t jftomcat .
 
 #push the current image to aliyun
 
+docker pull registry.cn-hangzhou.aliyuncs.com/open/jftomcat
+
+docker run -d --name jftomcat -p 8080:8080 -p 8958:8958 -p 8000:8000 -v /usr/local/tomcat/webapps/upload:/storage/www/tomcat/upload jftomcat
 ```

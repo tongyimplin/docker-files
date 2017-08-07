@@ -1,6 +1,6 @@
 FROM tomcat:8.5
 
-MAINTAINER jafar.tang
+MAINTAINER jafar.tang<jafar.tang@qq.com>
 
 # this could be run multi times
 #RUN echo 'helloworld'
