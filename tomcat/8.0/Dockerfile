@@ -1,4 +1,4 @@
-FROM tomcat:8.0
+FROM tomcat:8.5
 
 MAINTAINER jafar.tang
 
@@ -27,6 +27,7 @@ EXPOSE 8080 8958 8000
 RUN pwd \
     && echo "Asia/Shanghai" > /etc/timezone \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+#    && ls -lah /docker-java-home/jre/lib/security
     && sed "s/securerandom.source=file:\/dev\/random/securerandom.source=file:\/dev\/urandom/g" /etc/java-8-openjdk/security/java.security
 
 
