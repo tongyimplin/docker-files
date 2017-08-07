@@ -13,7 +13,7 @@ EXPOSE 8080 8958 8000
 
 # add local file to image
 #ADD ./ /app
-ADD ./java.security /etc/java-8-openjdk/security/
+#ADD ./java.security /etc/java-8-openjdk/security/
 
 # mount point volumn
 #VOLUMN
@@ -26,6 +26,8 @@ ADD ./java.security /etc/java-8-openjdk/security/
 # this is only run one times
 RUN pwd \
     && echo "Asia/Shanghai" > /etc/timezone \
-    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && sed "s/securerandom.source=file:\/dev\/random/securerandom.source=file:\/dev\/urandom/g" /etc/java-8-openjdk/security/java.security
+
 
 # everything is ready to build
