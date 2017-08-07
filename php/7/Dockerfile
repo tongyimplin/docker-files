@@ -4,7 +4,7 @@ RUN echo 'hello' \
     && echo "Asia/Shanghai" > /etc/timezone \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 	&& apt-get update \
-	&& apt-get install openssl  libssl-dev \
+	&& apt-get install -y openssl  libssl-dev \
 	&& pecl install mongodb \
 	&& echo "extension=mongodb.so" >> /usr/local/etc/php/php.ini
 
