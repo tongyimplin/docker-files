@@ -26,4 +26,6 @@ ADD ./java.security /etc/java-8-openjdk/security/
 # this is only run one times
 RUN pwd \
     && echo "Asia/Shanghai" > /etc/timezone \
-    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+# everything is ready to build
