@@ -1,0 +1,7 @@
+```
+# build image
+docker build -t jftomcat .
+
+#push the current image to aliyun
+
+```
