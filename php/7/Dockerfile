@@ -7,6 +7,7 @@ RUN echo 'この世の全ての不利益は当人の能力不足!' \
 	&& php composer-setup.php \
 	&& php -r "unlink('composer-setup.php');" \
 	&& ls -lah \
+	&& apt-get update \
 	&& apt-get install -y git \
 	&& git --version \
 	&& mv /var/www/html/composer.phar /var/lib/composer.phar \
