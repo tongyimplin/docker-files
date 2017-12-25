@@ -26,11 +26,3 @@ RUN docker-php-ext-install pdo_mysql
 RUN cp -r -f /usr/share/zoneinfo/Hongkong /etc/localtime \
     && echo -ne "Alpine Linux 3.4 image. (`uname -rsv`)\n" >> /root/.built \
 	&& date +'%Y-%m-%d %H:%M:%S'
-
-# cd php/7
-# docker build -t jfphp7 .
-# docker run -d -p 8085:80 -v /Users/jafar/phproot:/var/www/html --name php71 registry.cn-hangzhou.aliyuncs.com/open/jfphp7:1.1
-# docker run -d -p 8085:80 -v /storage/www/php:/var/www/html --name php71 registry.cn-hangzhou.aliyuncs.com/open/jfphp7:1.1
-# docker run -d -p 8085:80 -v F:/jafar/workspace/php:/var/www/html --name php71 registry.cn-hangzhou.aliyuncs.com/open/jfphp7:1.1
-
-# この世の全ての不利益は当人の能力不足
